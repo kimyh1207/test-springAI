@@ -18,5 +18,5 @@ jobs:
 
       - name: vivaceailab에 미러링
         run: |
-          git remote add vivaceailab https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/kimyh1207/vivace2.git
+          git remote add vivaceailab https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/kimyh1207/vivaceailab.git
           git push vivaceailab HEAD:main --force
