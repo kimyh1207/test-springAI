@@ -1,0 +1,31 @@
+# WikiDocs 자동 발행 워크플로
+# docs/ 폴더 변경 시 WikiDocs API로 동기화
+# 사용 전: WIKIDOCS_TOKEN 시크릿을 GitHub 저장소에 설정 필요
+
+name: Publish to WikiDocs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Publish to WikiDocs
+        env:
+          WIKIDOCS_TOKEN: ${{ secrets.WIKIDOCS_TOKEN }}
+        run: python scripts/publish_wikidocs.py
