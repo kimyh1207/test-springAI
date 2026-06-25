@@ -1,7 +1,7 @@
 ---
 title: "21장. 포트폴리오로 완성하기"
 order: 21
-tags: [portfolio, documentation]
+tags: [portfolio, documentation, adr, roadmap]
 status: draft
 author: vivace
 wikidocs_id: ""
@@ -18,4 +18,6 @@ tistory_id: ""
 
 ## 학습 목표
 
-> 작성 예정
+- 코드를 포트폴리오로 전환하는 문서화 전략을 익힌다
+- ADR로 기술 의사결정 과정을 기록하는 습관을 만든다
+- 이 책 이후 심화 학습 경로를 설계한다
